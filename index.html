@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask the AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ask Your Questions</h1>
+    <input type="text" id="question" placeholder="Type your question here..." />
+    <button onclick="getResponse()">Ask</button>
+    <div id="response"></div>
+
+    <script>
+        function getResponse() {
+            const question = document.getElementById('question').value;
+            const responseDiv = document.getElementById('response');
+
+            // Simulating a response from the AI
+            if (question) {
+                responseDiv.innerHTML = "You asked: " + question + "<br>Response: This is a simulated response. (In a real application, you would connect to an AI service here.)";
+            } else {
+                responseDiv.innerHTML = "Please enter a question.";
+            }
+        }
+    </script>
+</body>
+</html>
